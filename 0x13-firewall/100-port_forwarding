@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 .before
 #
 # Rules that should be run before the ufw command line added rules. Custom
