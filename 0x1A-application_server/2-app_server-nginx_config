@@ -5,9 +5,9 @@ server {
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html;
 	# server's ip
-        server_name 100.27.4.38;
+        server_name 54.90.34.224;
 	# header
-        add_header X-Served-By 449040-web-01;
+        add_header X-Served-By 529928-web-01;
 
 	#hbnb
         location /hbnb_static {

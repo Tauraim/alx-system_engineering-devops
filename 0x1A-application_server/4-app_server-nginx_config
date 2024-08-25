@@ -5,8 +5,8 @@ server {
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html;
         #server ip
-        server_name 100.27.4.38;
-        add_header X-Served-By 449040-web-01;
+        server_name 54.90.34.224;
+        add_header X-Served-By 529928-web-01;
         # hbnb_static
         location /hbnb_static {
                 alias /data/web_static/current/;
