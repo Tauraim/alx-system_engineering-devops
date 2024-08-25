@@ -1,0 +1,37 @@
+[Unit]
+Description=Gunicorn instance to serve hbnb
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/path/to/your/app/web_dynamic  # Ensure this is the correct path
+ExecStart=/usr/local/bin/gunicorn --workers 3 --bind 0.0.0.0:5003 --access-logfile /tmp/airbnb-access.log --error-logfile /tmp/airbnb-error.log 2-hbnb:app
+
+[Install]
+WantedBy=multi-user.target
+# Reload systemd to recognize the new service
+sudo systemctl daemon-reload
+
+# Start the Gunicorn service
+sudo systemctl start gunicorn
+
+# Enable the service to start at boot
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+# Check access logs
+cat /tmp/airbnb-access.log
+
+# Check error logs
+cat /tmp/airbnb-error.log
+# Copy the service file to your local machine
+scp web-01:/etc/systemd/system/gunicorn.service /path/to/local/folder
+
+# Navigate to your project folder
+cd /path/to/your/local/repository
+
+
+
+
+
+
